@@ -46,20 +46,23 @@
   transition: 0.5s;
   /* border: 0.5px dashed rgba(255, 255, 255, 0.3); */
   position: relative;
-  padding: 50px;
+  /* Give the inner text room from the card borders */
+  padding: 55px 50px;
   box-sizing: border-box;
 }
 
 .what-noTouch:hover,
 .what-content-active {
-  min-height: 67%;
-  padding: 40px 50px;
+  /* Give the hovered card more room for its bottom content */
+  min-height: 77%;
+  padding: 38px 50px;
 }
 
 .what-noTouch:hover ~ .what-content,
 .what-box-in:hover .what-noTouch:not(:hover),
 .what-content.what-sibling {
-  min-height: 33%;
+  /* Keep the collapsed sibling compact while hovered */
+  min-height: 23%;
   padding: 10px 50px;
 }
 .what-content h3 {
@@ -76,7 +79,7 @@
 .what-content h4 {
   font-weight: 300;
   letter-spacing: 1px;
-  margin: 0px;
+  margin: 6px 0 0 0;
   font-size: 14px;
   opacity: 0.3;
 }
@@ -208,6 +211,27 @@
   height: 100%;
   overflow: hidden;
 }
+
+/* Allow scrolling only on the currently expanded card */
+.what-noTouch:hover .what-content-in,
+.what-content-active .what-content-in {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* Keep scrollbars subtle (WebKit) */
+  scrollbar-width: thin; /* Firefox */
+}
+
+.what-noTouch:hover .what-content-in::-webkit-scrollbar,
+.what-content-active .what-content-in::-webkit-scrollbar {
+  width: 6px;
+}
+
+.what-noTouch:hover .what-content-in::-webkit-scrollbar-thumb,
+.what-content-active .what-content-in::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+}
 .what-content-in h5 {
   font-weight: 300;
   opacity: 0.5;
@@ -302,14 +326,14 @@
   }
   .what-noTouch:hover,
   .what-content-active {
-    min-height: 67%;
-    padding: 50px;
+    min-height: 77%;
+    padding: 42px;
   }
 
   .what-noTouch:hover ~ .what-content,
   .what-box-in:hover .what-noTouch:not(:hover),
   .what-content.what-sibling {
-    min-height: 33%;
+    min-height: 23%;
     padding: 10px 50px;
   }
 }
