@@ -21,7 +21,8 @@ export function setCharTimeline(
   const tl2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".about-section",
-      start: "center 55%",
+      /* Start later so the landing view keeps the character centered */
+      start: "top 85%",
       end: "bottom top",
       scrub: true,
       invalidateOnRefresh: true,
@@ -81,7 +82,7 @@ export function setCharTimeline(
         .to(".about-section", { opacity: 0, delay: 3, duration: 2 }, 0)
         .fromTo(
           ".character-model",
-          { pointerEvents: "inherit" },
+          { pointerEvents: "inherit", x: 0 },
           { pointerEvents: "none", x: "-75%", delay: 2, duration: 5 },
           0
         )
