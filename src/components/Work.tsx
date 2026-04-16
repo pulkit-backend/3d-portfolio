@@ -5,32 +5,32 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "CallHQ",
-    category: "Voice AI Calling Platform",
-    tools: "Voice AI, Calling Automation, CRM Integrations",
-    image: "/images/callhq.png",
-    link: "https://callhq.ai",
+    title: "CustomsPro",
+    category: "B2B SaaS · AI / Automation",
+    tools: "Python, FastAPI, PostgreSQL, Claude API, Qwen2-VL",
+    image: "/images/customspro.png",
+    link: "#",
   },
   {
-    title: "Whatsapp Automation",
-    category: "WABA Application",
-    tools: "WhatsApp Business API, Workflow Automation, Notifications",
-    image: "/images/whatsapp.png",
-    link: "https://whatsapp.callhq.ai",
+    title: "VacayStack",
+    category: "B2B SaaS · PMS",
+    tools: "FastAPI, Next.js, PostgreSQL, Cloudflare, TypeScript",
+    image: "/images/whatsapp.png", // Placeholder
+    link: "#",
   },
   {
-    title: "Broki",
-    category: "Real Estate Platform for FnB Industry",
-    tools: "Property Discovery, Lead Management, Marketplace Workflows",
-    image: "/images/broki.png",
-    link: "https://broki.in",
+    title: "Invoicing Automation",
+    category: "Enterprise · Fintech",
+    tools: "Java, PostgreSQL, Kafka, AWS",
+    image: "/images/broki.png", // Placeholder
+    link: "#",
   },
   {
-    title: "Orrdr.com",
-    category: "Ecommerce Platform and Mobile App",
-    tools: "Ecommerce, Mobile Experience, Order Management",
-    image: "/images/orrdr.png",
-    link: "https://orrdr.com",
+    title: "Kafka Migration",
+    category: "Infrastructure · Platform",
+    tools: "Kafka, Java, Kubernetes, Confluent",
+    image: "/images/orrdr.png", // Placeholder
+    link: "#",
   },
 ];
 

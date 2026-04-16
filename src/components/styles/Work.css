@@ -32,6 +32,7 @@
   width: 100%;
   border-top: 1px solid #363636;
   border-bottom: 1px solid #363636;
+  position: relative;
 }
 
 .carousel-track {
@@ -41,17 +42,21 @@
 }
 
 .carousel-slide {
-  min-width: 100%;
-  flex-shrink: 0;
+  flex: 0 0 100%;
+  width: 100%;
   box-sizing: border-box;
   padding: 50px 0;
+  overflow: hidden;
 }
 
 .carousel-content {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 40px;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 
 .carousel-info {
@@ -112,6 +117,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 50%;
+  overflow: hidden;
 }
 
 /* ── Navigation Arrows ── */
@@ -228,8 +235,10 @@
 }
 
 .work-image img {
-  max-width: 100%;
-  max-height: 400px;
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: contain;
   border-radius: 8px;
 }
 
